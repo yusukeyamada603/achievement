@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+"http://struts.apache.org/dtds/struts-2.3.dtd">
+ <struts>
+ <constant name="struts.devMode" value="true"/>
+<package name="com.internousdev.ecsite.action" extends="struts-default">
+
+ <action name="GoHomeAction" class="com.internousdev.ecsite1.action.GoHomeAction" method="execute">
+ <result name="success">home.jsp</result>
+ </action>
+
+<action name="HomeAction" class="com.internousdev.ecsite1.action.HomeAction" method="execute">
+ <result name="login">login.jsp</result>
+ <result name="success">buyItem.jsp</result>
+ </action>
+
+<action name="SelectAction" class="com.internousdev.ecsite1.action.SelectAction" method="execute">
+ <result name="success">selectBuyItem.jsp</result>
+
+ </action>
+
+ <action name="SelectBuyItemAction" class="com.internousdev.ecsite1.action.SelectBuyItemAction" method="execute">
+ <result name="success">selectBuyItemConfirm.jsp</result>
+
+ </action>
+
+
+ <action name="SelectBuyItemConfirmAction" class="com.internousdev.ecsite1.action.SelectBuyItemConfirmAction" method="execute">
+ <result name="success">selectBuyItemComplete.jsp</result>
+ <result name="error">selectBuyItem.jsp</result>
+ </action>
+
+<action name="LoginAction" class="com.internousdev.ecsite1.action.LoginAction" method="execute">
+ <result name="error">login.jsp</result>
+ <result name="success">buyItem.jsp</result>
+ </action>
+
+<action name="UserCreateAction" class="com.internousdev.ecsite1.action.UserCreateAction" method="execute">
+ <result name="back">login.jsp</result>
+ <result name="success">userCreate.jsp</result>
+ </action>
+
+ <action name="UserCreateConfirmAction" class="com.internousdev.ecsite1.action.UserCreateConfirmAction" method="execute">
+ <result name="success">userCreateConfirm.jsp</result>
+ <result name="error">userCreate.jsp</result>
+ </action>
+
+
+ <action name="UserCreateCompleteAction" class="com.internousdev.ecsite1.action.UserCreateCompleteAction" method="execute">
+ <result name="success">userCreateComplete.jsp</result>
+ </action>
+
+ <action name="BuyItemAction" class="com.internousdev.ecsite1.action.BuyItemAction" method="execute">
+ <result name="success">buyItemConfirm.jsp</result>
+ <result name="error">buyItem.jsp</result>
+ </action>
+
+<action name="BuyItemConfirmAction" class="com.internousdev.ecsite1.action.BuyItemConfirmAction" method="execute">
+ <result name="success">buyItemComplete.jsp</result>
+ <result name="back">buyItem.jsp</result>
+ </action>
+
+ <action name="MyPageAction" class="com.internousdev.ecsite1.action.MyPageAction" method="execute">
+ <result name="success">myPage.jsp</result>
+ <result name="error">error.jsp</result>
+ </action>
+
+<action name="LogoutAction" class="com.internousdev.ecsite1.action.LogoutAction" method="execute">
+ <result name="success">home.jsp</result>
+ </action>
+
+</package>
+</struts>
